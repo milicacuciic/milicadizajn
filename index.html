@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
 <html lang="sr">
 <head>
@@ -131,13 +130,13 @@ section{padding:clamp(72px,10vw,128px) 0}
 .browser-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#E9E2D2;border-bottom:1px solid var(--line)}
 .browser-bar i{width:10px;height:10px;border-radius:50%;background:#CcC2AE;display:block}
 .browser-url{margin-left:12px;font-size:12.5px;color:var(--ink-soft);background:var(--paper);border-radius:6px;padding:4px 12px;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-.work-media img{width:100%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.work-media img{width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .work-media a:hover img{transform:scale(1.03)}
 .wm-stack{position:relative}
 .wm-phone{position:absolute;bottom:20px;left:-56px;width:21%;max-width:140px;min-width:104px;z-index:2;background:#1b1a18;border-radius:26px;padding:13px 7px;box-shadow:0 22px 34px -16px rgba(40,30,15,.5)}
 .wm-phone::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:24%;height:4px;background:#3a362e;border-radius:2px;z-index:3}
 .wm-screen{border-radius:14px;overflow:hidden;background:#000;line-height:0}
-.wm-screen img{display:block;width:100%}
+.wm-screen img{display:block;width:100%;height:auto}
 .work:nth-child(even) .wm-phone{left:auto;right:-56px}
 .work-body h3{font-family:"Source Serif 4",Georgia,serif;font-weight:500;font-size:clamp(28px,3.6vw,40px);margin:10px 0 4px;line-height:1.05}
 .work-type{color:var(--accent);font-size:16px;font-weight:600;margin:0}
@@ -316,7 +315,8 @@ footer{background:#E5DCD0;color:var(--ink-soft);padding:0 0 40px}
 
 /* ---- responsive ---- */
 @media(max-width:1000px){
-  .work{grid-template-columns:minmax(0,1fr);gap:30px}
+  .work,
+  .work:nth-child(even){grid-template-columns:minmax(0,1fr);gap:30px}
   .work:nth-child(even) .work-media{order:0}
   .work-body{max-width:620px}
   .wm-phone,.work:nth-child(even) .wm-phone{left:auto;right:10px;bottom:-18px}
@@ -348,6 +348,8 @@ footer{background:#E5DCD0;color:var(--ink-soft);padding:0 0 40px}
   .about-belief{margin-top:8px}
 }
 @media(max-width:520px){
+  .wm-phone,.work:nth-child(even) .wm-phone{width:24%;min-width:84px;max-width:104px;right:8px;bottom:-14px;padding:11px 6px;border-radius:22px}
+  .wm-screen{border-radius:11px}
   .foot-top{flex-direction:column}
   .foot-meta{text-align:left}
   .price{grid-template-columns:1fr}
@@ -683,9 +685,10 @@ h1,.cta-band-h,.about-belief{text-wrap:balance}
         <div class="pair"><div class="b qb">Da li će se sajt lepo videti na telefonu?</div><div class="b ab"><strong>MILICA</strong>Da. Svaki sajt je responzivan, što znači da je prilagođen telefonu, tabletu i računaru, jer većina posetilaca danas dolazi upravo sa telefona.</div></div>
         <div class="pair"><div class="b qb">Koliko traje izrada?</div><div class="b ab"><strong>MILICA</strong>Jednostavan sajt obično traje od 5 do 10 dana, veći nešto duže. Najviše zavisi od toga koliko brzo dogovorimo tekst i slike.</div></div>
         <div class="pair"><div class="b qb">Šta treba od mene?</div><div class="b ab"><strong>MILICA</strong>Nekoliko fotografija, osnovni podaci (radno vreme, kontakt, usluge) i vaše mišljenje usput. Ostalo preuzimam ja.</div></div>
+        <div class="pair"><div class="b qb">Već imam sajt, ali je zastareo. Možete li da ga napravite iznova?</div><div class="b ab"><strong>MILICA</strong>Da. Pogledam šta imate, zadržimo ono što valja, a ostalo napravim ispočetka, da izgleda savremeno i lepo se vidi na telefonu.</div></div>
         <div class="pair"><div class="b qb">Kako se plaća?</div><div class="b ab"><strong>MILICA</strong>Polovinu cene plaćate unapred, a ostatak kada sajt bude gotov. Rokove i sve ostalo dogovaramo na početku.</div></div>
         <div class="pair"><div class="b qb">Domen i hosting, kako to ide?</div><div class="b ab"><strong>MILICA</strong>Domen je adresa sajta (na primer vasafirma.rs), a hosting prostor gde sajt stoji. Zajedno ih biramo, ja sve podesim, a plaćate direktno provajderu, pa ostaju na vaše ime.</div></div>
-        <div class="pair"><div class="b qb">Mogu li kasnije sam da menjam sadržaj?</div><div class="b ab"><strong>MILICA</strong>Sitne izmene radim ja, brzo. Ako želite sami da menjate sadržaj, dogovorimo rešenje koje vam to omogućava.</div></div>
+        <div class="pair"><div class="b qb">Mogu li kasnije sam da menjam sadržaj?</div><div class="b ab"><strong>MILICA</strong>Sitne izmene radim ja, brzo, a prvih trideset dana su besplatne. Ako želite sami da menjate sadržaj, recite mi unapred pa sajt napravim tako da to možete.</div></div>
       </div>
     </div>
   </section>
@@ -813,5 +816,3 @@ h1,.cta-band-h,.about-belief{text-wrap:balance}
 </script>
 </body>
 </html>
-
-</body></html>
